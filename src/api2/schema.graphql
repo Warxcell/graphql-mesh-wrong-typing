@@ -4,4 +4,10 @@ type Query {
 
 type Object2 {
     id: ID!
+    anotherRelation: Object3!
+}
+
+type Object3 {
+    id: ID!
+    isActive: Boolean!
 }

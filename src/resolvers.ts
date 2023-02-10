@@ -14,6 +14,9 @@ const resolvers: Resolvers = {
           }
         }).then((data) => {
           console.log(data);
+          if (!data.anotherRelation.isActive) {
+            return null;
+          }
           return data;
         });
       }
