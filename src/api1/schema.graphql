@@ -1,0 +1,8 @@
+type Query {
+    objects1: [Object1!]!
+}
+
+type Object1 {
+    id: ID!
+    relationId: ID!
+}

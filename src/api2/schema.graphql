@@ -1,0 +1,7 @@
+type Query {
+    getObjectById(id: ID!): Object2!
+}
+
+type Object2 {
+    id: ID!
+}

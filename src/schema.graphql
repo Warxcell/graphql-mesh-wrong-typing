@@ -1,0 +1,3 @@
+extend type Object1 {
+    relation: Object2
+}
