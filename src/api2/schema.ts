@@ -11,6 +11,17 @@ export default makeExecutableSchema({
     Query: {
       getObjectById: () => {
         throw new Error('test');
+      },
+      getObjectsByIds: () => {
+        return [
+          {
+            id: 1,
+            anotherRelation: {
+              id: 5,
+              isActive: true
+            }
+          }
+        ]
       }
     }
   }

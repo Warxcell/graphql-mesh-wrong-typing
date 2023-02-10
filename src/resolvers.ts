@@ -5,13 +5,12 @@ const resolvers: Resolvers = {
     relation: {
       fragment: '{ relationId }',
       resolve: async (root, args, context, info) => {
-        return context.Api2.Query.getObjectById({
+        return context.Api2.Query.getObjectsByIds({
           root,
           context,
           info,
-          args: {
-            id: root.relationId
-          }
+          key: root.relationId,
+          argsFromKeys: (keys) => ({ids: keys}),
         }).then((data) => {
           console.log(data);
           if (!data.anotherRelation.isActive) {

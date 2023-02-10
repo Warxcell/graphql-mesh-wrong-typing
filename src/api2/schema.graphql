@@ -1,5 +1,7 @@
 type Query {
     getObjectById(id: ID!): Object2!
+
+    getObjectsByIds(ids: [ID!]!): [Object2!]!
 }
 
 type Object2 {
